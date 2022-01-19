@@ -3,19 +3,14 @@
 let playerPlay = prompt("Rock, Paper, or Scissors?");
 switch(playerPlay.toLowerCase()) {
     case "rock":
-        console.log("The player has chosen rock!");
         playerPlay = "rock";
         break;
     case "paper":
-        console.log('The player has chosen paper!');
         playerPlay = "paper";
         break;
     case "scissors":
-        console.log('The player has chosen scissors!');
         playerPlay = "scissors";
         break;
-    default:
-        console.log('Invalid choice.  Please refresh the page to try again.')
 }
 //Determine computer input using random choice
 function computerPlay() {
@@ -27,8 +22,14 @@ function computerPlay() {
 
     return choiceArray[Math.floor(Math.random() * choiceArray.length)];
 }
-computerPlay();
-console.log("The computer has chosen " + computerPlay() + "!");
+//Commenting out the following code because it's screwing up the results
+//computerPlay();
+//console.log("The computer has chosen " + computerPlay() + "!");
+
+//Keep track of games won by user and computer
+let playerWins = 0;
+let computerWins = 0;
+
 //Determine whether user or computer wins the round
 function playRound(playerSelection, computerSelection) {
      computerSelection = computerPlay();
@@ -37,18 +38,21 @@ function playRound(playerSelection, computerSelection) {
      if (computerSelection  === "rock" && playerSelection === "scissors" ||
          computerSelection === "scissors" && playerSelection === "paper" ||
          computerSelection === "paper"  && playerSelection === "rock") {
-        return "The computer wins!";
+        return "You chose " + playerSelection + ".  The computer chose " +
+        computerSelection + ".  The computer wins!";
     } else if (computerSelection === playerSelection) {
-         return "It's a tie!";
+         return "You chose " + playerSelection + ".  The computer chose " +
+         computerSelection + ".  It's a tie!";
     } else {
-        return "The player wins!"
+        return "You chose " + playerSelection + ".  The computer chose " +
+        computerSelection + ".  You win!";
     }
     
 }
 
+//Execute one round of the game and announce the winnner - commenting out code for a five round match
 playRound();
 console.log(playRound());
 
-//Announce winner of round
-//Keep track of games won by user and computer
+
 //End best of five series when computer or user wins three rounds
