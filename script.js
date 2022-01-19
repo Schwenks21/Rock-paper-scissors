@@ -15,6 +15,18 @@ switch(playerSelection.toLowerCase()) {
         console.log('Invalid choice.  Please refresh the page to try again.')
 }
 //Determine computer input using random choice
+function computerPlay() {
+    let choiceArray = [
+        "rock",
+        "paper",
+        "scissors"
+    ];
+
+    return choiceArray[Math.floor(Math.random() * choiceArray.length)];
+}
+
+computerPlay();
+console.log("The computer has chosen: " + computerPlay() + "!");
 //Determine whether user or computer wins the round
 //Announce winner of round
 //Keep track of games won by user and computer
