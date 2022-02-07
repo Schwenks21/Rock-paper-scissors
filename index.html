@@ -4,28 +4,43 @@
         <title>Rock, Paper, Scissors!</title>
         <meta charset="UCF-8">
         <script src="script2.js" defer></script>
+        <link rel='stylesheet' href='style.css'>
     </head>
     <body>
         <div id="header">
             <h1>Rock, Paper, Scissors!</h1>
+            <h4>First to five wins!</h4>
         </div>
         <div id="container">
-            <h2 id = "container-header">What do you choose to play?</h2>
-            <button id = "rock" class = "button">Rock</button>
-            <button id = "scissors" class = "button">Scissors</button>
-            <button id = "paper" class = "button">Paper</button>
-        </div>
-        <div id = "results">
-            <h2 id = "results-header">Round Results:</h2>
-            <p id = "player-round"></p>
-            <p id = "computer-round"></p>
+            <h2 id = "container-header">Choose Your Play</h2>
+            <div id="button-container">
+                <button id = "rock" class = "button">👊</button>
+                <button id = "scissors" class = "button">✌️</button>
+                <button id = "paper" class = "button">✋</button>
+            </div>
+            <br>
+            <h2>The Computer Plays:</h2>
+            <div id="cpu-container"></div>
+                <div id="cpuPlay"></div>
+            <br>
             <p id="winner-round"></p>
-            <h2 id="scoreboard">Scoreboard: first to 5 wins!</h2>
-            <p id="player-score"></p>
-            <p id="computer-score"></p>
-            <p id="winner-game"></p>
-            
         </div>
+        <h2>Wins</h2>
+        <div id ="results">
+            <div id="player-score-container">
+                <h2>You</h2>
+                <p id="player-score"></p>
+            </div>
+            <div id="cpu-score-container">
+                <h2>Computer</h2>
+                <p id="computer-score"></p>
+            </div>
+        </div>
+        <br>
+        <div id ="game-results">
+            <p id="winner-game"></p>
+        </div>
+
         
     </body>
 </html>
