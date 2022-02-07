@@ -1,0 +1,61 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: steelblue;
+    color: whitesmoke; 
+    margin: 0;
+}
+
+#header {
+    padding: 30px;
+    background-color: darkblue;
+}
+
+#container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#button-container {
+    display:flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+#cpu-container {
+    display:flex;
+    justify-content: center;
+    width: 300px;
+}
+
+.button {
+    width: 75px;
+    height: 75px;
+    font-size: 50px;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+#cpuPlay {
+    width: 75px;
+    height: 75px;
+    font-size: 50px;
+    border-radius: 5px;
+    background-color: steelblue;
+}
+
+#results {
+    display: flex;
+    justify-content: center;
+}
+
+#player-score-container,
+#cpu-score-container {
+    padding: 0 50px;
+}
+
+#game-results {
+    align-items: center;
+}
